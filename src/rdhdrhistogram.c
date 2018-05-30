@@ -533,7 +533,7 @@ static int ut_stddev (void) {
 
         v = rd_hdr_histogram_stddev(hdr);
         RD_UT_ASSERT(rd_dbl_eq0(v, exp, 0.00000000001),
-                     "StdDev is %f, expected %f", v, exp);
+                     "StdDev is %.12f, expected %.12f", v, exp);
 
         rd_hdr_histogram_destroy(hdr);
         RD_UT_PASS();
